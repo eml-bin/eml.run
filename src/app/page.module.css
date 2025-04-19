@@ -1,0 +1,55 @@
+.gridContainer {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "info"
+    "chat";
+}
+
+/* Móvil */
+.info {
+  grid-area: info;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.chat {
+  grid-area: chat;
+  padding: 1rem;
+}
+
+.windows {
+  display: none;
+}
+
+/* Escritorio */
+@media (min-width: 768px) {
+  .gridContainer {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "chat windows";
+  }
+
+  .info {
+    display: none;
+  }
+
+  .chat {
+    grid-area: chat;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+  }
+
+  .windows {
+    grid-area: windows;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+}

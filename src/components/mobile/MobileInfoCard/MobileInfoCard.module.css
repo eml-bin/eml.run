@@ -1,0 +1,44 @@
+.card {
+  position: relative;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  padding-top: 3rem; /* espacio extra para los botones */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de botones sobre el borde superior */
+.buttonGroup {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* desplaza hacia arriba la mitad de su own height */
+  display: flex;
+  gap: 0.5rem;
+  background: transparent;
+}
+
+/* Estilo básico de botones */
+.btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #888;
+  border-radius: 0.25rem;
+  background: white;
+  cursor: pointer;
+}
+
+/* Contenido interno */
+.content {
+  /* tu layout interno */
+}
+
+/* Ocultar en desktop usando la misma media query de tu ResponsiveLayout */
+@media (min-width: 768px) {
+  .card {
+    display: none;
+  }
+}

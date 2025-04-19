@@ -1,0 +1,31 @@
+.window {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Alternar posición */
+.left {
+  justify-self: start;
+  width: 48%;
+}
+
+.right {
+  justify-self: end;
+  width: 48%;
+}
+
+/* Colores por tipo */
+.info {
+  border-left: 4px solid #0070f3;
+}
+
+.tools {
+  border-left: 4px solid #10b981;
+}
+
+.other {
+  border-left: 4px solid #f59e0b;
+}

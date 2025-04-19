@@ -1,0 +1,75 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* 🗂 Mensajes: zona scrollable */
+.messages {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+}
+
+/* 🌡 Burbuja base */
+.bubbleApp,
+.bubbleUser {
+  max-width: 80%;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  position: relative;
+  word-wrap: break-word;
+}
+
+/* 📦 Burbuja “App” pegada a la izquierda */
+.bubbleApp {
+  background-color: #f1f0f0;
+  align-self: flex-start;
+  /* elimina el radio en la esquina inferior izquierda */
+  border-bottom-left-radius: 0;
+}
+
+/* 📦 Burbuja “Usuario” pegada a la derecha */
+.bubbleUser {
+  background-color: #0b93f6;
+  color: white;
+  align-self: flex-end;
+  /* elimina el radio en la esquina inferior derecha */
+  border-bottom-right-radius: 0;
+}
+
+/* 🖊 Barra de entrada fija abajo */
+.inputBar {
+  display: flex;
+  padding: 0.5rem;
+  border-top: 1px solid #ccc;
+}
+
+/* 🌐 Input expansible */
+.input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #999;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+}
+
+/* 🟢 Botón de envío */
+.sendBtn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #0b93f6;
+  color: white;
+  cursor: pointer;
+}
+
+/* Opcional: cambiar en desktop si quieres algo distinto */
+@media (min-width: 768px) {
+  .inputBar {
+    /* podrías aumentar padding o cambiar posición */
+  }
+}

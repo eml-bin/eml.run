@@ -56,7 +56,7 @@ export default function useBackground(): RefObject<HTMLCanvasElement | null> {
           drops[i]++;
         }
       });
-    }, 100);
+    }, 55);
 
     return () => clearInterval(timer);
   }, [windowSize, ready]);
