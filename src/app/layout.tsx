@@ -10,15 +10,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default async function RootLayout() {
   return (
     <html lang="en">
       <body>
-        <Background>{children}</Background>
+        <Background>S</Background>
       </body>
     </html>
   );

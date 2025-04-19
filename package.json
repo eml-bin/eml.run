@@ -9,9 +9,11 @@
     "lint": "next lint --ext .ts,.tsx"
   },
   "dependencies": {
+    "@types/ua-parser-js": "^0.7.39",
     "next": "15.2.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "ua-parser-js": "^2.0.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

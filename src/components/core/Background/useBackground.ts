@@ -7,8 +7,16 @@ export default function useBackground(): RefObject<HTMLCanvasElement | null> {
     width: typeof window !== "undefined" ? window.innerWidth : 0,
     height: typeof window !== "undefined" ? window.innerHeight : 0,
   });
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
+    document.fonts.load("1px aztek").then(() => {
+      setReady(true);
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!ready || !canvasRef.current) return;
     if (!canvasRef.current) return;
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
@@ -18,31 +26,40 @@ export default function useBackground(): RefObject<HTMLCanvasElement | null> {
     canvas.height = windowSize.height;
 
     const fontSize =
-      22 + Math.max(0, Math.floor((windowSize.width - 800) / 100)) * 4;
+      22 + Math.max(0, Math.floor((windowSize.width - 800) / 100)) * 2;
 
     const columns = Math.floor(canvas.width / fontSize);
-    const drops = Array(columns).fill(1);
+    const drops = Array(columns).fill(0);
+    const dropDelays = Array.from({ length: columns }, () =>
+      Math.floor(Math.random() * 50)
+    );
 
     const timer = setInterval(() => {
-      ctx.fillStyle = "rgba(0,0,0,0.2)";
+      ctx.fillStyle = "rgba(0,0,0,0.15)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "#1AF597";
       ctx.font = `${fontSize}px aztek`;
 
       drops.forEach((y, i) => {
+        if (dropDelays[i] > 0) {
+          dropDelays[i]--;
+          return;
+        }
         const x = i * fontSize;
         const text = CODEX[Math.floor(Math.random() * CODEX.length)];
         ctx.fillText(text, x, y * fontSize);
 
         if (y * fontSize > canvas.height && Math.random() > 0.99) {
           drops[i] = 0;
+          dropDelays[i] = Math.floor(Math.random() * 100);
+        } else {
+          drops[i]++;
         }
-        drops[i]++;
       });
     }, 100);
 
     return () => clearInterval(timer);
-  }, [windowSize]);
+  }, [windowSize, ready]);
 
   useEffect(() => {
     function onResize() {
