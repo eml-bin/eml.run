@@ -10,11 +10,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout() {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
       <body>
-        <Background>eml</Background>
+        <Background>{children}</Background>
       </body>
     </html>
   );
