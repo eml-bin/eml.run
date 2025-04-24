@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-/* Alternar posición */
 .left {
   justify-self: start;
   width: 48%;
@@ -17,7 +16,6 @@
   width: 48%;
 }
 
-/* Colores por tipo */
 .info {
   border-left: 4px solid #0070f3;
 }

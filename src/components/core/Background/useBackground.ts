@@ -35,7 +35,7 @@ export default function useBackground(): RefObject<HTMLCanvasElement | null> {
     );
 
     const timer = setInterval(() => {
-      ctx.fillStyle = "rgba(0,0,0,0.15)";
+      ctx.fillStyle = "rgba(0,0,0,0.25)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = "#1AF597";
       ctx.font = `${fontSize}px aztek`;
@@ -56,7 +56,7 @@ export default function useBackground(): RefObject<HTMLCanvasElement | null> {
           drops[i]++;
         }
       });
-    }, 55);
+    }, 50);
 
     return () => clearInterval(timer);
   }, [windowSize, ready]);

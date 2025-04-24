@@ -1,6 +1,7 @@
 .gridContainer {
   display: grid;
-  height: 100vh;
+  height: 95vh;
+  width: 100vw;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -38,8 +39,16 @@
 
   .chat {
     grid-area: chat;
-    border-right: 1px solid #ccc;
-    overflow-y: auto;
+    overflow-y: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
   }
 
   .windows {

@@ -2,7 +2,6 @@ import styles from "./MobileInfoCard.module.css";
 
 type InfoCardProps = {
   title?: string;
-  /* cualquier prop que necesites */
 };
 
 export default function MobileInfoCard({
@@ -18,7 +17,6 @@ export default function MobileInfoCard({
 
       <div className={styles.content}>
         <h2>{title}</h2>
-        {/* aquí va tu contenido */}
       </div>
     </div>
   );

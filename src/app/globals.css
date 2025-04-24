@@ -1,6 +1,21 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --white-rgba-20: rgba(255, 255, 255, 0.2);
+  --black-rgba-90: rgba(0, 0, 0, 0.9);
+  --black-rgb: rgb(40, 40, 40);
+  --tearsgreen-rgba-65: rgba(9, 244, 142, 0.65);
+  --tearsgreen-rgba-75: rgba(9, 244, 142, 0.75);
+  --tearsgreen-rgba-85: rgba(9, 244, 142, 0.85);
+  --tearsgreen-rgba-95: rgba(9, 244, 142, 0.95);
+  --tearsgreen-rgb: rgb(9, 244, 142);
+
+  --agent-color: #ffeb3b;
+  --guest-color: #4caf50;
+  --bubble-bg: rgba(0, 0, 0, 0.6);
+  --bubble-radius: 0.5rem;
+  --glow-size: 8px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -10,13 +25,26 @@
   }
 }
 
-/* En globals.css o layout.tsx */
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* evita scroll de todo el body */
+  overflow: hidden;
+}
+
+*::-webkit-scrollbar-track {
+  border: 1px solid var(--white-rgba-20);
+  background-color: var(--black-rgba-90);
+  opacity: 0.1;
+}
+
+*::-webkit-scrollbar {
+  width: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--tearsgreen-rgba-65);
 }
 
 @font-face {

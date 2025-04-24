@@ -1,6 +1,14 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import type { Metadata } from "next";
+
+import { IBM_Plex_Mono, Courier_Prime } from "next/font/google";
+
 import Background from "@/components/core/Background/Component";
+
+const appFont = Courier_Prime({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Ing. EML",
@@ -16,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="es">
+      <body className={appFont.className}>
         <Background>{children}</Background>
       </body>
     </html>

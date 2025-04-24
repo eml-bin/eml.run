@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useRef, useEffect } from "react";
 import styles from "./ChatWindow.module.css";
+import { FiSend } from "react-icons/fi";
 
 type Message = {
   from: "app" | "user";
@@ -22,6 +23,12 @@ export default function ChatWindow() {
     // aquí podrías disparar la respuesta de la “app”
   };
 
+  const endRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    endRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
   return (
     <div className={styles.chatContainer}>
       <div className={styles.messages}>
@@ -30,9 +37,11 @@ export default function ChatWindow() {
             key={i}
             className={m.from === "app" ? styles.bubbleApp : styles.bubbleUser}
           >
+            <br />
             {m.text}
           </div>
         ))}
+        <div ref={endRef} />
       </div>
 
       <form className={styles.inputBar} onSubmit={sendMessage}>
@@ -44,7 +53,7 @@ export default function ChatWindow() {
           className={styles.input}
         />
         <button type="submit" className={styles.sendBtn}>
-          Enviar
+          <FiSend size={20} />
         </button>
       </form>
     </div>
