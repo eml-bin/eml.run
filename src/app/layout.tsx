@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 
-import { IBM_Plex_Mono, Courier_Prime } from "next/font/google";
+import { Courier_Prime } from "next/font/google";
 
 import Background from "@/components/core/Background/Component";
 
