@@ -20,7 +20,6 @@ export default function ChatWindow() {
     if (!input.trim()) return;
     setMessages((msgs) => [...msgs, { from: "user", text: input }]);
     setInput("");
-    // aquí podrías disparar la respuesta de la “app”
   };
 
   const endRef = useRef<HTMLDivElement>(null);
@@ -30,7 +29,7 @@ export default function ChatWindow() {
   }, [messages]);
 
   return (
-    <div className={styles.chatContainer}>
+    <div className={`${styles.chatContainer} neon-ef`}>
       <div className={styles.messages}>
         {messages.map((m, i) => (
           <div
@@ -38,7 +37,7 @@ export default function ChatWindow() {
             className={m.from === "app" ? styles.bubbleApp : styles.bubbleUser}
           >
             <br />
-            {m.text}
+            <span>{m.text}</span>
           </div>
         ))}
         <div ref={endRef} />

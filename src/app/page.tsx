@@ -2,22 +2,25 @@ import styles from "./page.module.css";
 import ChatWindow from "@/components/ChatWindow/Component";
 import DesktopWindow from "@/components/desktop/DesktopWindow/Component";
 import MobileInfoCard from "@/components/mobile/MobileInfoCard/Component";
-
-interface WindowConfig {
-  id: string;
-  type: "info" | "tools" | "other";
-}
+import { WindowProps } from "@/interfaces";
 
 export default function Home() {
-  const windows: WindowConfig[] = [
-    { id: "1", type: "info" },
-    { id: "2", type: "tools" },
-    { id: "3", type: "other" },
-    { id: "4", type: "info" },
-    { id: "5", type: "info" },
-    { id: "6", type: "info" },
-    { id: "7", type: "info" },
-    { id: "8", type: "info" },
+  const windowsData: WindowProps[] = [
+    {
+      title: "Info",
+      content: <div>info</div>,
+      style: "info",
+    },
+    {
+      title: "Experience",
+      content: <div>tools</div>,
+      style: "tools",
+    },
+    {
+      title: "Experience",
+      content: <div>exp</div>,
+      style: "exp",
+    },
   ];
 
   return (
@@ -35,12 +38,10 @@ export default function Home() {
       {/* Contenedor Ventanas (solo escritorio) */}
 
       <div className={styles.windows}>
-        {windows.map((w, index) => (
-          <DesktopWindow
-            key={w.id}
-            type={w.type}
-            position={index % 2 === 0 ? "left" : "right"}
-          />
+        {windowsData.map((win, idx) => (
+          <DesktopWindow key={idx} title={win.title} style={win.style}>
+            {win.content}
+          </DesktopWindow>
         ))}
       </div>
     </div>
