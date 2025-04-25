@@ -1,25 +1,31 @@
 import styles from "./page.module.css";
 import ChatWindow from "@/components/ChatWindow/Component";
-import DesktopWindow from "@/components/desktop/DesktopWindow/Component";
-import MobileInfoCard from "@/components/mobile/MobileInfoCard/Component";
+import DesktopWindow from "@/components/DesktopWindow/Component";
+import MobileInfoCard from "@/components/MobileInfoCard/Component";
 import { WindowProps } from "@/interfaces";
+import { DataCard } from "@/layout/Data/Component";
 
 export default function Home() {
   const windowsData: WindowProps[] = [
     {
-      title: "Info",
-      children: <div>info</div>,
-      style: "info",
+      title: "Data",
+      children: <DataCard />,
+      style: "data",
+    },
+    {
+      title: "Tech",
+      children: <div>🧰</div>,
+      style: "tech",
     },
     {
       title: "Experience",
-      children: <div>tools</div>,
-      style: "tools",
-    },
-    {
-      title: "Experience",
-      children: <div>exp</div>,
+      children: <div>🌌</div>,
       style: "exp",
+    },
+    {
+      title: "Bio",
+      children: <div>🫀</div>,
+      style: "bio",
     },
   ];
 

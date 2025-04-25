@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 import { Courier_Prime } from "next/font/google";
 
-import Background from "@/components/core/Background/Component";
+import Background from "@/layout/core/Background/Component";
 
 const appFont = Courier_Prime({
   subsets: ["latin"],
@@ -12,7 +12,7 @@ const appFont = Courier_Prime({
 
 export const metadata: Metadata = {
   title: "Ing. EML",
-  description: "Eduardo Muñoz López, Ingeniero de Software",
+  description: "Eduardo Muñoz López, Ingeniero de Software de México",
   icons: {
     icon: "/favicon.ico",
   },

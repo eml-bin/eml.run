@@ -1,0 +1,50 @@
+.window {
+  padding: 1rem;
+  transition: transform 0.2s ease;
+  color: var(--white-rgb);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  will-change: filter;
+  border-radius: var(--glass-radius);
+}
+
+.data {
+  background: linear-gradient(
+    to bottom,
+    var(--pinkGlass-l1),
+    var(--pinkGlass-l2),
+    var(--pinkGlass-l3),
+    var(--pinkGlass-l4)
+  );
+}
+
+.bio {
+  background: linear-gradient(
+    to bottom,
+    var(--orangeGlass-l1),
+    var(--orangeGlass-l2),
+    var(--orangeGlass-l3),
+    var(--orangeGlass-l4)
+  );
+}
+
+.tech {
+  background: linear-gradient(
+    to bottom,
+    var(--blueGlass-l1),
+    var(--blueGlass-l2),
+    var(--blueGlass-l3),
+    var(--blueGlass-l4)
+  );
+}
+
+.exp {
+  background: linear-gradient(
+    to bottom,
+    var(--yellowGlass-l1),
+    var(--yellowGlass-l2),
+    var(--yellowGlass-l3),
+    var(--yellowGlass-l4)
+  );
+}

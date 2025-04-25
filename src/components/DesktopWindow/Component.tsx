@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 export default function DesktopWindow({ title, children, style }: WindowProps) {
   return (
-    <div className={clsx(styles.window, styles[style])}>
+    <div className={clsx(styles.window, styles[style], "neon-ef")}>
       <h3>{title.toUpperCase()}</h3>
       <div>{children}</div>
     </div>

@@ -8,16 +8,16 @@
 
   background: linear-gradient(
     to bottom,
-    rgba(9, 244, 142, 0.2),
-    rgba(9, 220, 130, 0.3),
-    rgba(9, 200, 120, 0.35),
-    rgba(9, 244, 142, 0.15)
+    var(--greenGlass-l1),
+    var(--greenGlass-l2),
+    var(--greenGlass-l3),
+    var(--greenGlass-l4)
   );
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid var(--tearsgreen-rgba-25);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
   will-change: filter;
-  border-radius: 0.25rem;
+  border-radius: var(--glass-radius);
 }
 
 .messages {
@@ -43,7 +43,7 @@
 .bubbleApp {
   align-self: flex-start;
   margin-left: 1rem;
-  color: var(--matrix-rgba-70);
+  color: var(--chatGreen-rgb);
   text-align: left;
 }
 
@@ -56,7 +56,7 @@
 .bubbleUser {
   align-self: flex-end;
   margin-right: 1rem;
-  color: var(--matrix-rgb);
+  color: var(--tearsgreen-rgb);
   text-align: right;
 }
 
@@ -78,11 +78,11 @@
   flex: 1;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid var(--tearsgreen-rgba-65);
   padding: 0.25rem 0.5rem;
   margin: 0;
-  color: var(--matrix-rgb);
-  font-size: 1rem;
+  color: var(--tearsgreen-rgb);
+  font-size: 0.9rem;
 }
 
 .input:focus {

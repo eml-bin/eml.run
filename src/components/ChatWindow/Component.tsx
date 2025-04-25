@@ -11,7 +11,10 @@ type Message = {
 
 export default function ChatWindow() {
   const [messages, setMessages] = useState<Message[]>([
-    { from: "app", text: "¡Hola! ¿En qué puedo ayudarte?" },
+    {
+      from: "app",
+      text: "¡Hola! Soy el asistente de Eduardo ML ¿En que puedo ayudarte?",
+    },
   ]);
   const [input, setInput] = useState("");
 
@@ -46,7 +49,7 @@ export default function ChatWindow() {
       <form className={styles.inputBar} onSubmit={sendMessage}>
         <input
           type="text"
-          placeholder="Escribe un mensaje..."
+          placeholder="Mensaje..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
           className={styles.input}
