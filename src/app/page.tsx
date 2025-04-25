@@ -8,17 +8,17 @@ export default function Home() {
   const windowsData: WindowProps[] = [
     {
       title: "Info",
-      content: <div>info</div>,
+      children: <div>info</div>,
       style: "info",
     },
     {
       title: "Experience",
-      content: <div>tools</div>,
+      children: <div>tools</div>,
       style: "tools",
     },
     {
       title: "Experience",
-      content: <div>exp</div>,
+      children: <div>exp</div>,
       style: "exp",
     },
   ];
@@ -40,7 +40,7 @@ export default function Home() {
       <div className={styles.windows}>
         {windowsData.map((win, idx) => (
           <DesktopWindow key={idx} title={win.title} style={win.style}>
-            {win.content}
+            {win.children}
           </DesktopWindow>
         ))}
       </div>
