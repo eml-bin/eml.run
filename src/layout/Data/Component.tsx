@@ -42,14 +42,6 @@ export const DataCard: React.FC = () => {
       <hr className={styles.separator} />
 
       <section className={styles.section}>
-        <pre className={styles.meta}>
-          {JSON.stringify(buildMeta(personal), null, 2)}
-        </pre>
-      </section>
-
-      <hr className={styles.separator} />
-
-      <section className={styles.section}>
         <div className={styles.contactItem}>
           <FaPhoneAlt className={styles.icon} />
           <span
@@ -106,6 +98,14 @@ export const DataCard: React.FC = () => {
         >
           <FaDiscord />
         </a>
+      </section>
+
+      <hr className={styles.separator} />
+
+      <section className={styles.section}>
+        <pre className={styles.meta}>
+          {JSON.stringify(buildMeta(personal), null, 2)}
+        </pre>
       </section>
     </div>
   );

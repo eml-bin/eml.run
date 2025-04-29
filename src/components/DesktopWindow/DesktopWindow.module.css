@@ -11,6 +11,10 @@
   border-radius: var(--glass-radius);
 }
 
+.window::-webkit-scrollbar {
+  width: 7px;
+}
+
 .window > h1 {
   font-size: var(--window-title-clamp);
 }

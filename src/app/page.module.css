@@ -25,6 +25,32 @@
   display: none;
 }
 
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .gridContainer {
+    width: 430px; /* o el valor que simula un móvil en portrait */
+    margin: 0 auto;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "info"
+      "chat";
+  }
+
+  .info {
+    display: block;
+  }
+
+  .chat {
+    display: block;
+    overflow: auto;
+  }
+
+  .windows {
+    display: none;
+  }
+}
+
 /* Escritorio */
 @media (min-width: 768px) {
   .gridContainer {
