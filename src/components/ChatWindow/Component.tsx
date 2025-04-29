@@ -13,7 +13,7 @@ export default function ChatWindow() {
   const [messages, setMessages] = useState<Message[]>([
     {
       from: "app",
-      text: "¡Hola! Soy el asistente de Eduardo ML ¿En que puedo ayudarte?",
+      text: "Soy tetromino, asistente de Eduardo ML \n ¿En que puedo ayudarte?",
     },
   ]);
   const [input, setInput] = useState("");

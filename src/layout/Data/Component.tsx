@@ -1,3 +1,5 @@
+"use client";
+
 import { dataSeed } from "@/constants/db/data";
 import {
   FaDiscord,
@@ -7,43 +9,80 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import styles from "./Data.module.css";
+import { useState } from "react";
+import clsx from "clsx";
 
 export const DataCard: React.FC = () => {
-  const { personal, socialMedia } = dataSeed;
+  const { personal, contact, socialMedia } = dataSeed;
+  const [copied, setCopied] = useState<string | null>(null);
+
+  const buildMeta = (personal: { birth: number; nation: string }) => {
+    return { nacimiento: personal.birth, nación: personal.nation };
+  };
+
+  const handleCopy = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(text);
+      setTimeout(() => setCopied(null), 2000);
+    } catch (err) {
+      console.error("Error al copiar:", err);
+    }
+  };
 
   return (
     <div className={styles.card}>
-      <section className={styles.personal}>
-        <h1 className={styles.name}>{personal.name}</h1>
-        <p className={styles.role}>{personal.role}</p>
-        <div className={styles.details}>
-          <span className={styles.detailItem}>🎂 {personal.birth}</span>
-          <span className={styles.detailItem}>{personal.nation}</span>
-          <span className={styles.detailItem}>
-            🛂 {personal.professionalLicense}
+      <section className={clsx(styles.section, styles.principal)}>
+        <p className={styles.name}>{personal.name}</p>
+        <p className={styles.role}>
+          {personal.role} ({personal.professionalLicense})
+        </p>
+      </section>
+
+      <hr className={styles.separator} />
+
+      <section className={styles.section}>
+        <pre className={styles.meta}>
+          {JSON.stringify(buildMeta(personal), null, 2)}
+        </pre>
+      </section>
+
+      <hr className={styles.separator} />
+
+      <section className={styles.section}>
+        <div className={styles.contactItem}>
+          <FaPhoneAlt className={styles.icon} />
+          <span
+            onClick={() => handleCopy(contact.mobile)}
+            className={styles.copyText}
+          >
+            {contact.mobile}
+            {copied === contact.mobile && (
+              <span className={styles.copied}> (copiado)</span>
+            )}
+          </span>
+        </div>
+        <div className={styles.contactItem}>
+          <FaEnvelope className={styles.icon} />
+          <span
+            onClick={() => handleCopy(contact.mail)}
+            className={styles.copyText}
+          >
+            {contact.mail}
+            {copied === contact.mail && (
+              <span className={styles.copied}> (copiado)</span>
+            )}
           </span>
         </div>
       </section>
 
+      <hr className={styles.separator} />
+
       <section className={styles.social}>
         <a
-          href={`tel:${socialMedia.mobile}`}
-          className={styles.link}
-          aria-label="Phone"
-        >
-          <FaPhoneAlt />
-        </a>
-        <a
-          href={`mailto:${socialMedia.mail}`}
-          className={styles.link}
-          aria-label="Email"
-        >
-          <FaEnvelope />
-        </a>
-        <a
           href={socialMedia.linkedin}
-          className={styles.link}
           target="_blank"
+          className={clsx(styles.socialLink, styles.linkedin)}
           rel="noopener noreferrer"
           aria-label="LinkedIn"
         >
@@ -51,8 +90,8 @@ export const DataCard: React.FC = () => {
         </a>
         <a
           href={socialMedia.github}
-          className={styles.link}
           target="_blank"
+          className={clsx(styles.socialLink, styles.github)}
           rel="noopener noreferrer"
           aria-label="GitHub"
         >
@@ -60,8 +99,8 @@ export const DataCard: React.FC = () => {
         </a>
         <a
           href={socialMedia.discord}
-          className={styles.link}
           target="_blank"
+          className={clsx(styles.socialLink, styles.discord)}
           rel="noopener noreferrer"
           aria-label="Discord"
         >

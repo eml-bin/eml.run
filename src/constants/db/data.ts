@@ -6,9 +6,11 @@ export const dataSeed = {
     nation: "🇲🇽",
     professionalLicense: "10248412",
   },
-  socialMedia: {
+  contact: {
     mobile: "+52 461-227-5316",
     mail: "edu@eml.run",
+  },
+  socialMedia: {
     linkedin: "https://www.linkedin.com/in/eml9407",
     github: "https://github.com/eml-bin",
     discord: "https://discord.gg/CGRt55wZxa",

@@ -8,23 +8,23 @@ import { DataCard } from "@/layout/Data/Component";
 export default function Home() {
   const windowsData: WindowProps[] = [
     {
-      title: "Data",
+      title: "🧑‍💻",
       children: <DataCard />,
       style: "data",
     },
     {
-      title: "Tech",
-      children: <div>🧰</div>,
+      title: "🧰",
+      children: <div>...</div>,
       style: "tech",
     },
     {
-      title: "Experience",
-      children: <div>🌌</div>,
+      title: "🌌",
+      children: <div>...</div>,
       style: "exp",
     },
     {
-      title: "Bio",
-      children: <div>🫀</div>,
+      title: "🫀",
+      children: <div>...</div>,
       style: "bio",
     },
   ];

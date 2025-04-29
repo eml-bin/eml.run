@@ -1,4 +1,6 @@
 .window {
+  min-height: 0;
+  overflow: auto;
   padding: 1rem;
   transition: transform 0.2s ease;
   color: var(--white-rgb);
@@ -7,6 +9,15 @@
   border: var(--glass-border);
   will-change: filter;
   border-radius: var(--glass-radius);
+}
+
+.window > h1 {
+  font-size: var(--window-title-clamp);
+}
+
+.window * {
+  font-size: var(--window-text-clamp);
+  color: var(--tearsgreen-rgb);
 }
 
 .data {

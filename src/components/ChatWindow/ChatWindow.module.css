@@ -43,7 +43,7 @@
 .bubbleApp {
   align-self: flex-start;
   margin-left: 1rem;
-  color: var(--chatGreen-rgb);
+  color: var(--tearsgreen-rgb);
   text-align: left;
 }
 
