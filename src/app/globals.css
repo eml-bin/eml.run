@@ -47,6 +47,7 @@
   --tears-glow: drop-shadow(0 0 3px var(--tearsglow-rgb))
     drop-shadow(0 0 7px var(--tearsglow-rgb));
 
+  --chat-text-clamp: clamp(1rem, 1.5vw, 1.3rem);
   --window-title-clamp: clamp(1rem, 2.5vw, 3rem);
   --window-text-clamp: clamp(1rem, 1.5vw, 1.25rem);
 

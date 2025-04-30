@@ -12,7 +12,7 @@ import styles from "./Data.module.css";
 import { useState } from "react";
 import clsx from "clsx";
 
-export const DataCard: React.FC = () => {
+export const Data: React.FC = () => {
   const { personal, contact, socialMedia } = dataSeed;
   const [copied, setCopied] = useState<string | null>(null);
 
@@ -31,7 +31,7 @@ export const DataCard: React.FC = () => {
   };
 
   return (
-    <div className={styles.card}>
+    <div className={styles.content}>
       <section className={clsx(styles.section, styles.principal)}>
         <p className={styles.name}>{personal.name}</p>
         <p className={styles.role}>

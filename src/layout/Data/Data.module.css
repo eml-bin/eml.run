@@ -1,5 +1,4 @@
-.card {
-  font-family: monospace;
+.content {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -34,6 +33,7 @@
   white-space: pre-wrap;
   word-break: break-word;
   margin: 0;
+  font-family: inherit;
 }
 
 .separator {

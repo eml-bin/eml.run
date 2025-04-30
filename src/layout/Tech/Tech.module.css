@@ -1,0 +1,36 @@
+.columns {
+  margin: 0;
+  column-count: 3;
+  column-gap: 2rem;
+}
+
+.category {
+  break-inside: avoid;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.category span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.techList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.techItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.techItem::before {
+  content: "*";
+  margin-right: 0.5rem;
+  padding-left: 1.5rem;
+  color: #555;
+}
