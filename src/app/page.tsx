@@ -1,5 +1,4 @@
 import styles from "./page.module.css";
-import ChatWindow from "@/components/ChatWindow/Component";
 import DesktopWindow from "@/components/DesktopWindow/Component";
 import MobileInfoCard from "@/components/MobileInfoCard/Component";
 import { WindowProps } from "@/interfaces";
