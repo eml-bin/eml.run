@@ -4,7 +4,8 @@ export const dataSeed = {
     role: "Ingeniero de Software",
     birth: 1994,
     nation: "🇲🇽",
-    professionalLicense: "10248412",
+    professionalActivity: "Desde 2018",
+    professionalLicense: "Cédula: 10248412",
   },
   contact: {
     mobile: "+52 461-227-5316",

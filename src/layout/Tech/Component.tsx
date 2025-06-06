@@ -18,6 +18,7 @@ export const Tech: React.FC = () => {
               </div>
             ))}
           </div>
+          <hr />
         </div>
       ))}
     </div>

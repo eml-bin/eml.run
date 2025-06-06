@@ -4,6 +4,7 @@ import DesktopWindow from "@/components/DesktopWindow/Component";
 import MobileInfoCard from "@/components/MobileInfoCard/Component";
 import { WindowProps } from "@/interfaces";
 import { Data } from "@/layout/Data/Component";
+import { Experience } from "@/layout/Experience/Component";
 import { Tech } from "@/layout/Tech/Component";
 
 export default function Home() {
@@ -20,7 +21,7 @@ export default function Home() {
     },
     {
       title: "🌌",
-      children: <div>...</div>,
+      children: <Experience />,
       style: "exp",
     },
     {
@@ -35,11 +36,6 @@ export default function Home() {
       {/* Ventana info (solo móvil) */}
       <div className={styles.info}>
         <MobileInfoCard />
-      </div>
-
-      {/* Ventana chat (visible en ambos) */}
-      <div className={styles.chat}>
-        <ChatWindow />
       </div>
 
       {/* Contenedor Ventanas (solo escritorio) */}

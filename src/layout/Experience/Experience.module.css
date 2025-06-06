@@ -1,0 +1,23 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.header {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.exp {
+  margin: 0.5em 0 0.5em;
+}
+
+.exp li {
+  font-size: 1.35rem;
+}

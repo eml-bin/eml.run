@@ -16,7 +16,7 @@
     blink-caret 0.75s step-end var(--delay) infinite;
 }
 
-.principal *::before {
+.principal p::before {
   content: "> ";
 }
 
@@ -27,6 +27,10 @@
 
 .role {
   margin: 0;
+}
+
+.role ul {
+  margin: 0.5em 0;
 }
 
 .meta {

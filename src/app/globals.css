@@ -69,6 +69,12 @@ body {
   overflow: hidden;
 }
 
+hr {
+  border: none;
+  border-top: var(--dashed-separator);
+  margin: 0.5rem 0;
+}
+
 *::-webkit-scrollbar-track {
   border: 1px solid var(--white-rgba-20);
   background-color: var(--black-rgba-90);

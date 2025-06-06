@@ -35,7 +35,11 @@ export const Data: React.FC = () => {
       <section className={clsx(styles.section, styles.principal)}>
         <p className={styles.name}>{personal.name}</p>
         <p className={styles.role}>
-          {personal.role} ({personal.professionalLicense})
+          {personal.role}
+          <ul>
+            <li>{personal.professionalActivity}</li>
+            <li>{personal.professionalLicense}</li>
+          </ul>
         </p>
       </section>
 
