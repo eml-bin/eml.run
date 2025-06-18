@@ -12,19 +12,16 @@ export default function Home() {
       title: "🧑‍💻",
       children: <Data />,
       style: "data",
-      isMobile: false,
     },
     {
       title: "🧰",
       children: <Tech />,
       style: "tech",
-      isMobile: false,
     },
     {
       title: "🌌",
       children: <Experience />,
       style: "exp",
-      isMobile: false,
     },
   ];
 
@@ -39,7 +36,12 @@ export default function Home() {
 
       <div className={styles.windows}>
         {windowsData.map((win, idx) => (
-          <Window key={idx} title={win.title} style={win.style}>
+          <Window
+            key={idx}
+            title={win.title}
+            style={win.style}
+            isMobile={false}
+          >
             {win.children}
           </Window>
         ))}
