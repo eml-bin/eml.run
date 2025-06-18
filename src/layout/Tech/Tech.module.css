@@ -1,5 +1,5 @@
 .columns {
-  column-count: 2;
+  column-count: 1;
 }
 
 .category {
@@ -32,4 +32,11 @@
   margin-right: 0.5rem;
   padding-left: 1.5rem;
   color: #555;
+}
+
+/* Escritorio */
+@media (min-width: 768px) {
+  .columns {
+    column-count: 2;
+  }
 }

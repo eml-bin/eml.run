@@ -11,10 +11,10 @@ export const expSeed = [
     ],
   },
   {
-    title: "Instructor de Tecnología",
+    title: "Capacitador",
     exp_year: "2023",
     duration: "Activo",
-    role: "-",
+    role: "Instructor de Tecnología",
     exp: [
       "Diseño de contenido para cursos de tecnología.",
       "Impartición de cursos Fullstack aplicando técnicas andragógicas.",
