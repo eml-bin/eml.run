@@ -1,7 +1,7 @@
 .card {
   position: relative;
   border-radius: 0.5rem;
-  padding-top: 2.5rem; /* solo deja espacio superior para los botones */
+  padding-top: 2.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -67,6 +67,7 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: 1;
   transform: translateY(0);
+  height: 60vh;
 }
 
 .fadeOut {

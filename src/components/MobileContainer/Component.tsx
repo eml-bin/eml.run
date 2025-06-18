@@ -3,9 +3,9 @@ import { JSX, useState } from "react";
 import { Experience } from "@/layout/Experience/Component";
 import { Tech } from "@/layout/Tech/Component";
 import { Data } from "@/layout/Data/Component";
-import styles from "./MobileInfoCard.module.css";
+import styles from "./MobileContainer.module.css";
 import clsx from "clsx";
-import DesktopWindow from "@/components/DesktopWindow/Component";
+import DesktopWindow from "@/components/Window/Component";
 
 const mobileWindows: {
   title: string;
@@ -66,7 +66,11 @@ export default function MobileInfoCard() {
 
       <div className={clsx(styles.content, styles[fadeState])}>
         {activeWindow && (
-          <DesktopWindow title={activeWindow.title} style={activeWindow.style}>
+          <DesktopWindow
+            title={activeWindow.title}
+            style={activeWindow.style}
+            isMobile
+          >
             {activeWindow.component}
           </DesktopWindow>
         )}

@@ -36,6 +36,9 @@ export const expSeed = [
     exp_year: "2019",
     duration: "3 años",
     role: "Fullstack Engineer",
-    exp: ["", ""],
+    exp: [
+      "Integración con backend y frontend para servicios IoT e IA Predictiva para proyectos de Industria 4.0",
+      "Líder del área de Desarrollo de Software",
+    ],
   },
 ];

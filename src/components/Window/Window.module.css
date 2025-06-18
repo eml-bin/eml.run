@@ -11,6 +11,10 @@
   border-radius: var(--glass-radius);
 }
 
+.mobile {
+  height: 100%;
+}
+
 .window::-webkit-scrollbar {
   width: 7px;
 }

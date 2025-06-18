@@ -48,8 +48,8 @@
     drop-shadow(0 0 7px var(--tearsglow-rgb));
 
   --chat-text-clamp: clamp(1rem, 1.5vw, 1.3rem);
-  --window-title-clamp: clamp(1rem, 2.5vw, 3rem);
-  --window-text-clamp: clamp(1rem, 1.5vw, 1.25rem);
+  --window-title-clamp: clamp(2.5rem, 2.5vw, 3rem);
+  --window-text-clamp: clamp(1.5rem, 1.5vw, 1.5rem);
 
   --social-icon-scale: scale(1.3);
 }

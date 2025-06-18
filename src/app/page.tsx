@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
-import DesktopWindow from "@/components/DesktopWindow/Component";
-import MobileInfoCard from "@/components/MobileInfoCard/Component";
+import Window from "@/components/Window/Component";
+import MobileContainer from "@/components/MobileContainer/Component";
 import { WindowProps } from "@/interfaces";
 import { Data } from "@/layout/Data/Component";
 import { Experience } from "@/layout/Experience/Component";
@@ -23,27 +23,22 @@ export default function Home() {
       children: <Experience />,
       style: "exp",
     },
-    {
-      title: "🫀",
-      children: <div>...</div>,
-      style: "bio",
-    },
   ];
 
   return (
     <div className={styles.gridContainer}>
       {/* Ventana info (solo móvil) */}
       <div className={styles.info}>
-        <MobileInfoCard />
+        <MobileContainer />
       </div>
 
       {/* Contenedor Ventanas (solo escritorio) */}
 
       <div className={styles.windows}>
         {windowsData.map((win, idx) => (
-          <DesktopWindow key={idx} title={win.title} style={win.style}>
+          <Window key={idx} title={win.title} style={win.style}>
             {win.children}
-          </DesktopWindow>
+          </Window>
         ))}
       </div>
     </div>
