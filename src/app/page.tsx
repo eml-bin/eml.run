@@ -12,16 +12,19 @@ export default function Home() {
       title: "🧑‍💻",
       children: <Data />,
       style: "data",
+      isMobile: false,
     },
     {
       title: "🧰",
       children: <Tech />,
       style: "tech",
+      isMobile: false,
     },
     {
       title: "🌌",
       children: <Experience />,
       style: "exp",
+      isMobile: false,
     },
   ];
 
